@@ -41,7 +41,7 @@ const Experiment = async ({ experimentId, children, experimentHash }: Experiment
         <>
             {Children.map(children, (child: ReactNode) => {
                 const currVariantId = (child as any).props.variantId;
-                if (currVariantId === fetchedData.variantId) {
+                if (currVariantId === fetchedData.data) {
                     return child;
                 }
             })}
