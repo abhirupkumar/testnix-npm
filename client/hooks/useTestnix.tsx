@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const useTrackify = () => {
+const useTestnix = () => {
     const trackClicks = async ({ hash, experimentId, variantId }: { hash: string, experimentId: string, variantId: string }) => {
         const fetchedVariant = await fetch(`https://testnix.vercel.app/api/v1/event-clicks`, {
             method: 'POST',
@@ -35,4 +35,4 @@ const useTrackify = () => {
     };
 };
 
-export { useTrackify };
+export { useTestnix };
