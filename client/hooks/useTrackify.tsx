@@ -1,16 +1,32 @@
 import * as React from 'react';
-import { useState } from 'react';
 
 const useTrackify = () => {
-    const [clicks, setClicks] = useState(0);
-    const [conversions, setConversions] = useState(0);
-
-    const trackClicks = async (variantId: string) => {
-        setClicks(clicks + 1);
+    const trackClicks = async ({ hash, experimentId, variantId }: { hash: string, experimentId: string, variantId: string }) => {
+        const fetchedVariant = await fetch(`https://testnix.vercel.app/api/v1/event-clicks`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ hash, variantId, experimentId }),
+        });
+        const fetchedData = await fetchedVariant.json();
+        if (fetchedData.success == false) {
+            throw new Error(fetchedData.error);
+        }
     };
 
-    const trackConversions = async (variantId: string) => {
-        setConversions(conversions + 1);
+    const trackConversions = async ({ hash, experimentId, variantId }: { hash: string, experimentId: string, variantId: string }) => {
+        const fetchedVariant = await fetch(`https://testnix.vercel.app/api/v1/event-conversions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ hash, variantId, experimentId }),
+        });
+        const fetchedData = await fetchedVariant.json();
+        if (fetchedData.success == false) {
+            throw new Error(fetchedData.error);
+        }
     };
 
     return {
