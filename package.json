@@ -1,7 +1,7 @@
 {
   "name": "testnix",
   "version": "1.0.0",
-  "description": "",
+  "description": "This package helps you to track the events on your website and do split testing.",
   "main": "./dist/index.js",
   "types": "./dist/server/index.d.ts",
   "type": "module",
@@ -24,12 +24,17 @@
       "default": "./dist/index2.js"
     }
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhirupkumar/testnix-npm.git"
+  },
+  "author": "Abhirup Kumar Bhowmick",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.2.61",
+    "client-only": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.12.0",
