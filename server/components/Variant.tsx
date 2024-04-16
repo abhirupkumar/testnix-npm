@@ -22,4 +22,4 @@ const Variant = ({ variantId, children }: VariantProps) => {
 
 Variant.displayName = 'Textnix.Variant';
 
-export { Variant };
+export { Variant as default };

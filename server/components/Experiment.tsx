@@ -3,7 +3,7 @@ import { ReactNode, Children, isValidElement } from 'react';
 import { VariantProps } from './Variant';
 import "server-only";
 
-type ExperimentProps = {
+export type ExperimentProps = {
     experimentId: string;
     children: ReactNode;
     experimentHash: string;
@@ -50,4 +50,4 @@ const Experiment = async ({ experimentId, children, experimentHash }: Experiment
     )
 }
 
-export { Experiment };
+export { Experiment as default };

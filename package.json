@@ -1,6 +1,6 @@
 {
   "name": "testnix",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "This package helps you to track the events on your website and do split testing.",
   "main": "./dist/index.js",
   "types": "./dist/server/index.d.ts",
@@ -12,7 +12,8 @@
     "ab-testing",
     "split-testing",
     "analytics",
-    "tracking"
+    "tracking",
+    "testing"
   ],
   "exports": {
     "./server": {

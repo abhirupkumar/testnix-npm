@@ -1,1 +1,1 @@
-export * from "./hooks/useTestnix";
+export { useTestnix } from "./hooks/useTestnix";
