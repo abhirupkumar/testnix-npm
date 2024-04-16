@@ -2,6 +2,11 @@ import * as React from 'react';
 
 const useTestnix = () => {
     const trackClicks = async ({ hash, experimentId, variantId }: { hash: string, experimentId: string, variantId: string }) => {
+        if (process.env.NODE_ENV === "development") {
+            console.log("%c[TestNix]%c Tracking is disabled in development mode. No requests will be sent to the server.", "color: rgba(100, 100, 100, 1);", "");
+            console.log(`%c[TestNix]%c [${variantId}] of experiment '${experimentId}'.`, "color: rgba(100, 100, 100, 1);", "");
+            return;
+        }
         const fetchedVariant = await fetch(`https://testnix.vercel.app/api/v1/event-clicks`, {
             method: 'POST',
             headers: {
@@ -16,6 +21,11 @@ const useTestnix = () => {
     };
 
     const trackConversions = async ({ hash, experimentId, variantId }: { hash: string, experimentId: string, variantId: string }) => {
+        if (process.env.NODE_ENV == "development") {
+            console.log("%c[TestNix]%c Tracking is disabled in development mode. No requests will be sent to the server.", "color: rgba(100, 100, 100, 1);", "");
+            console.log(`%c[TestNix]%c [${variantId}] of experiment '${experimentId}'.`, "color: rgba(100, 100, 100, 1);", "");
+            return;
+        }
         const fetchedVariant = await fetch(`https://testnix.vercel.app/api/v1/event-conversions`, {
             method: 'POST',
             headers: {
