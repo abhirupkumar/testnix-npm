@@ -1,6 +1,6 @@
 {
   "name": "testnix",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This package helps you to track the events on your website and do split testing.",
   "main": "./dist/index.js",
   "types": "./dist/server/index.d.ts",
