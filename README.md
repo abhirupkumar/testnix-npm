@@ -1,10 +1,12 @@
-# Official Documentation: [TestNix Docs](https://testnix-docs.vercel.app).
+# Official site: [TestNix](https://testnix.vercel.app/)
+
+# Official Documentation: [TestNix Docs](https://testnix-docs.vercel.app)
 
 # Quickstart
 Create your project in under 5 minutes
 
 ## 1. Login to your dashboaard
-Login using Google, Github or Microsoft.
+Login to dashboard ([TestNix](https://testnix.vercel.app/)) using Google, Github or Microsoft.
 
 ## 2. Create Experiment
 Once you're logged in, Click the ```Create Experiment``` button in the top right corner.
