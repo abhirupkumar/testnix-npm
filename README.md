@@ -6,7 +6,7 @@
 Create your project in under 5 minutes
 
 ## 1. Login to your dashboaard
-Login to dashboard ([TestNix](https://testnix.vercel.app/)) using Google, Github or Microsoft.
+Login to [TestNix](https://testnix.vercel.app) dashboard using Google, Github or Microsoft.
 
 ## 2. Create Experiment
 Once you're logged in, Click the ```Create Experiment``` button in the top right corner.
